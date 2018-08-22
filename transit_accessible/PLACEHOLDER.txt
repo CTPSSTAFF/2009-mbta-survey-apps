@@ -1,0 +1,1 @@
+Placeholder file to force GitHub to create a subfolder for the 'simple sliding doors' files used by this app.
