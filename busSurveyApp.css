@@ -1,0 +1,177 @@
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+
+body {
+	font: 75% verdana, sans-serif;
+	line-height: 1.88889;
+	color: #05244B;
+/*	background: #05244b;  */
+	background-image: url(images/yellow_bkg.jpg);   
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.key_routes{
+    font: italic bold 1.1em georgia, sans-serif;
+    color:  #f8d522;	
+	line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+p.small {
+	margin-top: 5px;
+	font-size: 75%;
+}
+
+h1 {
+	font: italic bold 1.80em georgia, sans-serif;
+	margin-top: 2px;
+	margin-bottom: 0;
+	text-align: center;
+	line-height:  1.166;	
+	color: #f8d522;                        /* #b87f32; 		 gold  */
+/*	color: #bfe3ff;           light-blue  */
+/*	color: #ffd092;          light-tan  */
+}
+
+
+h2 {
+	font: bold 1.2em verdana, sans-serif;
+	letter-spacing: 1px;
+	margin-left: 8px;
+	margin-bottom: 0;
+	line-height: 1.166;	
+	color: #05244b;
+	padding: 5px;
+}
+
+#top {
+	width: 1050px;
+	height: 30px;
+	margin-bottom: 10px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#bigbox {
+	width: 1050px;
+	height: 630px;
+	margin: 20px 40px 0 20px;
+	padding: 5px;
+	background: #ffffff;
+	border: 4px solid #f2c64f;          /*#f2ab4f;               /*  #b87f32;    */
+}
+
+#left_container {
+	float: left;
+	width: 520px;
+	margin-left: 0;
+}
+
+#right_container {
+	width: 750px;         /*          50%;   */
+	margin-left: 520px;
+	padding-left: 10px;
+}
+
+
+#map{	
+	width: 500px;   
+	height:430px;
+	margin-left: 100px;
+    margin-top: 20px;
+	border: 4px double #15428b; 
+/*	border: 2px solid #aeaeae;     */
+	padding: 50px 10px 10px 100px;	
+
+}
+
+
+#station_name{	
+    width: 80%;	
+	margin-left: 10px;
+}
+
+#two{	   
+	margin-left: 10px;	
+}
+
+
+#directions {
+	color: #2A0B56;	
+	font-size: 95%;
+}
+
+#directions2 {
+	font-family: verdana, sans-serif;
+	color: #05244b;	
+	font-size: 1.2em;
+	margin-top: 10px;
+	margin-left: 30px;
+	margin-right: 25px;
+	text-align: left;
+	letter-spacing: 0;
+	line-height: 120%;
+}
+
+#mytabs {
+	margin-top: 10px;
+    width: 480px;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.unhidden {
+	visibility: visible;
+}
+
+#origin_grid, #access_grid, #income_grid, #vehicles_grid, #race_grid, #fare_grid{   
+    height: 300px;
+	overflow: auto;
+	width: 430px;
+}
+
+caption { 
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    text-align: left;
+    color: #9d0d0d;   
+  /*  color: #2d006b;  */
+}
+
+#download_header {
+    width:  60px;
+    font: bold 1.2em verdana, sans-serif;
+    color: #05244b;
+    margin-top: 20px;
+}
+
+#download_buttons {
+    display: block;
+    width: 250px;  
+    margin-left:  200px;
+    margin-top: -15px;
+}
+
+.equal_button {
+    width: 200px;
+}
+
+#commentary{
+    display: block;
+    margin-left: 80px;
+}
+
+#spanForButtonWithLink {
+    width: 200px;  
+}
+
