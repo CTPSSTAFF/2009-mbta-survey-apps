@@ -1,0 +1,230 @@
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	font: 75% verdana, sans-serif;
+	line-height: 1.88889;
+	color: #05244B;
+	background-image: url(images/blue_bkg_still_longer.jpg);
+	margin: 0;
+	padding: 0;
+}
+
+
+p {
+	margin-top: 0;
+	text-align: justify;
+	line-height: 1em;
+}
+
+p.small {
+	margin-top: 5px;
+	font-size: 95%;
+}
+
+
+h1 {
+	font: italic bold 1.80em georgia, sans-serif;
+	margin-top: 2px;
+	margin-bottom: 0;
+	text-align: center;
+	line-height: 1.166;
+    color: #fbe578;
+}
+
+h2 {
+    font: bold 1.0em verdana, sans-serif;
+/*	letter-spacing: 0.10em;   */
+	margin-left: 1px;
+	margin-bottom: 6px;
+	line-height: 1.1;	
+	color: #05244b;
+	padding: 2px
+}
+
+h3 {
+	font: bold 1.2em verdana, sans-serif;
+	letter-spacing: .20em;
+	margin-left: 8px;
+	margin-bottom: 0;
+	line-height: 1.166;	
+	color: #05244b;
+	padding: 5px;
+}
+
+
+
+#top {
+	width: 1050px;
+	height: 30px;
+	margin-bottom: 10px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+
+#bigbox {
+	width: 1050px;
+	height: 675px;
+	margin: 0 40px 0 20px;
+	padding: 5px;
+	background: #ffffff;
+	border: 4px solid #b87f32;        
+}   
+
+
+#left_container {
+	float: left;      
+	width: 500px;
+	margin-left: 0;
+}
+
+#right_container {
+	float: right;
+	width: 490px; 	
+	margin-left: 0;   
+    margin-top: 2px;
+	margin-right: 10px;	
+	padding-right: 10px;
+	position: relative;
+}
+
+
+#spider{	
+	width: 500px;   
+	height: 382px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	border: 4px double #15428b;  
+/*	border: 2px solid #15428b;   */
+}
+
+#directions {
+	font-family: verdana, sans-serif;
+	color: #05244b;	
+	font-size: 1.1em;
+	margin-top: 5px;
+	margin-left: 30px;
+	margin-right: 25px;
+	text-align: left;
+	letter-spacing: 0;
+}
+
+#directions2 {
+	font-family: verdana, sans-serif;
+	color: #05244b;	
+	font-size: 1.1em;
+	margin-top: 10px;
+	margin-left: 30px;
+	margin-right: 25px;
+	text-align: left;
+	letter-spacing: 0;
+	line-height: 120%;
+}
+
+#report {
+    font: bold 1.0em verdana, sans-serif;
+	letter-spacing: .1em;
+	margin-left: 0;
+	margin-bottom: 2px;
+	line-height: 1.166;	
+	color: #05244b;
+	padding: 5px;
+}
+
+#snName {
+	font: bold 1.2em arial, sans-serif;
+	line-height: 1.16;
+	width: 300px;
+    padding:2px;
+    background-color:#FFFFFF;
+	margin-top: 0;
+	margin-bottom: 40px;
+	margin-right: 20px;
+}
+
+.red {
+	color: #e52330;
+}
+
+.maroon {
+	color: #951313;
+}
+
+.green {
+	color: #175803;
+}
+
+.orange {
+	color: #ec7d06;
+}
+
+.blue {
+	color: #00579b;
+}
+
+
+#mytabs {   
+	margin-top: 0;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.unhidden {
+	visibility: visible;
+}
+
+.offscreen {
+	position: absolute;
+	left: -500em;
+	top: -100em;
+}
+
+#resetData {
+	margin-left: 5px;
+	margin-top: 5px;
+	font: 0.8em verdana, sans-serif;
+}
+
+#board_grid, #alight_grid, #access_grid, #vehicles_grid, #fare_grid, #income_grid, #race_grid{
+   
+    height: 300px;
+	overflow: auto;
+	width: 500px;
+}
+
+caption { 
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    text-align: left;
+    color: #9d0d0d;   
+  /*  color: #2d006b;  */
+}
+
+#download_header {
+    width:  60px;
+    font: bold 1.2em verdana, sans-serif;
+    color: #05244b;
+}
+
+#download_buttons {
+    display: block;
+    width: 250px;
+    margin-top:  -25px;
+    margin-left:  200px;  
+}
+
+.equal_button {
+    width: 200px;
+}
+
+#commentary{
+    display: block;
+    margin-left: 10px;
+}
