@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta name="description" content="Rapid Transit Survey" />
+<meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+<meta name="author" lang="en" content="CTPS" />
+<meta http-equiv="content-language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>MBTA Rapid Transit Survey</title>
+
+<script type="text/javascript">document.documentElement.className += " js";</script>
+
+<!-- *** JavaScript for jQuery library and Accessible Tabs library. *** -->
+<script src="../../libs/accessibleTabs/accessibleTabs-1.9.4/js/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../libs/accessibleTabs/accessibleTabs-1.9.4/js/jquery.tabs.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../libs/accessibleTabs/accessibleTabs-1.9.4/js/jquery.syncheight.js" type="text/javascript" charset="utf-8"></script> 
+
+<!-- *** JavaScript for Accessible Grid library. *** -->
+<script src="../../libs/accessibleGrid/accessibleGrid-0.09/jquery.accessibleGrid-0.09.js" type="text/javascript"></script>  
+
+<!-- *** JavaScript for OpenLayers (for use in WFS requests)  *** -->
+<script src="../../libs/openlayers/OpenLayers-2.13.1/OpenLayers.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39489988-1']);
+  _gaq.push(['_setDomainName', 'ctps.org']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+
+<!-- *** JavaScript for this application:  *** -->
+<script src="rtSurveyApp.js" type="text/javascript"></script>
+ <!-- ** Utilities for this app - has initialized array of rapid transit stations *** -->
+<script src="appUtils.js" type="text/javascript"></script>
+
+<!--            STYLESHEETS/CSS                 -->
+<link rel="stylesheet" type="text/css" href="transit_accessible/simple-sliding-doors-rapid-transit.css"  /> 
+
+<link rel="stylesheet" type="text/css" href="rtSurveyApp.css" />
+   
+<style type="text/css">
+    
+    .tabs {
+		margin-top: 0;
+		color: #2d006b;
+	}
+    .tabs .tabbody{
+        position:relative;
+    }
+       
+</style>
+
+
+ 
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $(".tabs").accessibleTabs({
+            tabhead:'h3',
+            fx:"fadeIn",
+            syncheights:true,
+            pagination:false
+        });
+    });
+
+</script>
+
+</head>
+
+
+
+<body>
+
+<div id="top">
+<h1>MBTA Rapid Transit Survey - 2008-09</h1>
+</div>					<!--    END OF "top"   -->
+
+   
+<div id="bigbox">    
+
+    <div id="left_container">
+            <div id="notseen01" class="offscreen">Shown on the page is the MBTA rapid transit line spider diagram showing all lines and stations not including the Silver Line.  
+            Users can click on a station name on the diagram to generate a table of survey results. Alternatively the user can select the desired station in the combo box also
+            on the page. Seven navigable data tables will be displayed.</div>
+        
+            <div id="spider"><img src="images/RT_map_Mattapan.png" alt="MBTA rapid transit spider map" width="100%" align="right" usemap="#closeup" /></div>
+            
+            <div id="directions">		  
+                <p class="small"> <a href="#nonav" class="offscreen" tabindex="50">Skip Image Map Navigation Links.</a>  Please disable popup blockers.</p>
+            </div>     		<!--  end of directions  -->
+            
+            <div id="directions2">
+                <span>To get more information about the surveys of <i>all</i> transit modes conducted in 2008-09 click this link: 
+				      <a href="description_mod.html"  onclick="return popup(this, 'description_mod')" title="Information page opens in new window" tabindex="55">More Info</a></span>
+            </div>		<!--  end of directions  -->	
+            
+
+        <map name="closeup" id="closeup">
+            <!--		MBTA WEBSITE    -->
+            <area alt="TheT" shape="rect" coords="10,330,120,377" href="http://www.mbta.com" target="_blank"/>
+
+            <!--       RED LINE    -->
+            <area alt="Alewife" title="Alewife" shape="rect" coords="39,26,103,50" href="javascript:other_station('Alewife')" />
+            <area alt="Davis" shape="rect" coords="105,6,134,41" href="javascript:other_station('Davis')" />
+            <area alt="Porter" shape="rect" coords="135,38,178,63" href="javascript:other_station('Porter')" />
+            <area alt="Harvard" shape="rect" coords="150,61,205,81" href="javascript:other_station('Harvard')" />
+            <area alt="Central" shape="rect" coords="180,86,227,100" href="javascript:other_station('Central')" />
+            <area alt="Kendall" shape="rect" coords="182,111,253,126" href="javascript:other_station('Kendall/MIT')" />
+            <area alt="Charles" shape="rect" coords="200,134,275,149" href="javascript:other_station('Charles/MGH')" />
+            <area alt="Park" shape="rect" coords="284,157,335,170" href="javascript:other_station('Park Street')" />
+            <area alt="Downtown" shape="rect" coords="312,181,417,197" href="javascript:other_station('Downtown Crossing')" /> 
+            <area alt="SouthStation" shape="rect" coords="335,209,409,218" href="javascript:other_station('South Station')" /> 
+            <area alt="Broadway" shape="rect" coords="365,230,423,245" href="javascript:other_station('Broadway')" /> 
+            <area alt="Andrew" shape="rect" coords="387,257,436,268" href="javascript:other_station('Andrew')" />
+            <area alt="JFK/Umass" shape="rect" coords="411,279,474,291" href="javascript:other_station('JFK/UMass')" /> 
+            <area alt="NorthQuincy" shape="rect" coords="434,302,500,313" href="javascript:other_station('North Quincy')" /> 
+            <area alt="Wollaston" shape="rect" coords="447,318,500,330" href="javascript:other_station('Wollaston')" /> 
+            <area alt="QuincyCenter" shape="rect" coords="426,333,464,351" href="javascript:other_station('Quincy Center')" /> 
+            <area alt="QuincyAdams" shape="rect" coords="414,352,486,362" href="javascript:other_station('Quincy Adams')" /> 
+            <area alt="Braintree" shape="rect" coords="427,371,494,383" href="javascript:other_station('Braintree')" /> 
+            <area alt="SavinHill" shape="rect" coords="366,301,421,313" href="javascript:other_station('Savin Hill')" /> 
+            <area alt="FieldsCorner" shape="rect" coords="343,316,412,328" href="javascript:other_station('Fields Corner')" /> 
+            <area alt="Shawmut" shape="rect" coords="363,330,411,341" href="javascript:other_station('Shawmut')" /> 
+            <area alt="Ashmont" shape="rect" coords="352,341,413,350" href="javascript:other_station('Ashmont')" />
+
+            <!--		MATTAPAN LINE     -->
+            <area alt="CedarGrove" shape="poly" coords="329,328,347,348,368,375,358,374,340,353,318,332" href="javascript:other_station('Cedar Grove')" /> 
+            <area alt="Butler" shape="poly" coords="332,349,349,370,352,377,344,376,336,365,327,354" href="javascript:other_station('Butler')" /> 
+            <area alt="Milton" shape="poly" coords="317,348,327,362,338,381,328,374,310,353" href="javascript:other_station('Milton')" /> 
+            <area alt="CentralAve" shape="poly" coords="288,332,307,353,321,378,314,376,299,358,278,337" href="javascript:other_station('Central Avenue')" /> 
+            <area alt="ValleyRd" shape="poly" coords="278,342,310,377,300,374,274,345" href="javascript:other_station('Valley Road')" /> 
+            <area alt="CapenStreet" shape="poly" coords="264,340,293,373,282,373,255,345" href="javascript:other_station('Capen Street')" /> 
+            <area alt="Mattapan" shape="rect" coords="215,373,273,383" href="javascript:other_station('Mattapan')" /> 
+
+            <!--         BLUE LINE        -->
+            <area alt="Bowdoin" shape="rect" coords="257,112,310,123" href="javascript:other_station('Bowdoin')" /> 
+            <area alt="Aquarium" shape="rect" coords="383,134,435,145" href="javascript:other_station('Aquarium')" /> 
+            <area alt="Maverick" shape="rect" coords="400,120,448,131" href="javascript:other_station('Maverick')" /> 
+            <area alt="Airport" shape="rect" coords="411,107,453,117" href="javascript:other_station('Airport')" /> 
+            <area alt="WoodIsland" shape="rect" coords="427,92,492,104" href="javascript:other_station('Wood Island')" /> 
+            <area alt="OrientHeights" shape="rect" coords="373,75,445,86" href="javascript:other_station('Orient Heights')" /> 
+            <area alt="SuffolkDowns" shape="rect" coords="388,60,461,70" href="javascript:other_station('Suffolk Downs')" /> 
+            <area alt="Beachmont" shape="rect" coords="413,46,470,57" href="javascript:other_station('Beachmont')" /> 
+            <area alt="RevereBeach" shape="rect" coords="416,32,486,42" href="javascript:other_station('Revere Beach')" /> 
+            <area alt="Wonderland" shape="rect" coords="419,17,499,28" href="javascript:other_station('Wonderland')" /> 
+
+            <!--         GREEN LINE       -->
+            <area alt="Lechmere" shape="rect" coords="238,73,295,85" href="javascript:other_station('Lechmere')" /> 
+            <area alt="SciencePark" shape="rect" coords="246,86,307,97" href="javascript:other_station('Science Park')" /> 
+            <area alt="NorthStation" shape="rect" coords="260,99,319,109" href="javascript:other_station('North Station')" /> 
+            <area alt="GovernmentCenter" shape="rect" coords="266,125,331,144" href="javascript:other_station('Government Center')" /> 
+            <area alt="Boylston" shape="poly" coords="248,207,275,183,285,191,259,215" href="javascript:other_station('Boylston')" /> 
+            <area alt="Arlington" shape="poly" coords="245,188,260,170,273,156,281,162,251,193" href="javascript:other_station('Arlington')" /> 
+            <area alt="Copley" shape="poly" coords="228,191,242,172,255,160,261,166,236,190" href="javascript:other_station('Copley')" /> 
+            <area alt="HynesConventionCenter" shape="poly" coords="210,188,223,171,235,162,241,168,218,193" href="javascript:other_station('Hynes Convention Ctr/ICA')" /> 
+            <area alt="Kenmore" shape="poly" coords="224,153,234,159,218,173,204,191,191,184,209,163" href="javascript:other_station('Kenmore')" /> 
+            <area alt="Prudential" shape="rect" coords="211,222,268,233" href="javascript:other_station('Prudential')" /> 
+            <area alt="Symphony" shape="rect" coords="199,235,255,245" href="javascript:other_station('Symphony')" /> 
+            <area alt="GreenB01" shape="rect" coords="130,111,173,128" href="javascript:other_station('B: Blandford to Babcock')" /> 
+            <area alt="GreenB02" shape="rect" coords="72,111,123,128" href="javascript:other_station('B: Packards Cnr to Warren')" /> 
+            <area alt="GreenB03" shape="rect" coords="11,111,67,128" href="javascript:other_station('B: Washington to Boston College')" /> 
+            <area alt="GreenC01" shape="poly" coords="107,158,153,158,165,176,94,176" href="javascript:other_station('C: St. Marys to Summit/Winchester')" /> 
+            <area alt="GreenC02" shape="poly" coords="102,204,142,204,145,220,97,220" href="javascript:other_station('C: Brandon to Cleveland Cir')" /> 
+            <area alt="GreenD01" shape="rect" coords="147,211,189,239" href="javascript:other_station('D: Fenway to Longwood')" />
+            <area alt="GreenD02" shape="poly" coords="88,234,99,245,81,265,58,293,46,277,64,257" href="javascript:other_station('D: Brookline Village to Brookline Hills')" />
+            <area alt="GreenD03" shape="poly" coords="72,221,85,233,70,250,68,250,30,262,49,242" href="javascript:other_station('D: Beaconsfield to Chestnut Hill')" />  
+            <area alt="GreenD04" shape="poly" coords="51,209,65,219,53,234,33,250,21,241,38,225" href="javascript:other_station('D: Newton Ctr to Eliot')" /> 
+            <area alt="GreenD05" shape="poly" coords="24,207,41,218,29,232,16,245,5,234,14,220" href="javascript:other_station('D: Waban to Riverside')" /> 
+            <area alt="GreenE01" shape="poly" coords="103,252,170,252,170,270,88,270" href="javascript:other_station('E: Northeastern to Museum of Fine Arts')" /> 
+            <area alt="GreenE02" shape="poly" coords="76,271,141,271,141,288,72,288" href="javascript:other_station('E: Longwood Medical Area to Brigham Cir')" /> 
+            <area alt="GreenE03" shape="rect" coords="76,296,140,308" href="javascript:other_station('E: Fenwood to Heath')" /> 
+
+            <!--         ORANGE LINE       -->
+            <area alt="OakGrove" shape="rect" coords="260,2,360,12" href="javascript:other_station('Oak Grove')" /> 
+            <area alt="Malden" shape="rect" coords="255,15,330,27" href="javascript:other_station('Malden Center')" /> 
+            <area alt="Wellington" shape="rect" coords="273,31,330,40" href="javascript:other_station('Wellington')" /> 
+            <area alt="Sullivan" shape="rect" coords="253,43,330,53" href="javascript:other_station('Sullivan Square')" />
+            <area alt="CommunityCollege" shape="rect" coords="237,57,330,69" href="javascript:other_station('Community College')" /> 
+            <area alt="Haymarket" shape="rect" coords="329,113,396,123" href="javascript:other_station('Haymarket')" /> 
+            <area alt="State" shape="rect" coords="336,134,371,153" href="javascript:other_station('State')" /> 
+            <area alt="Chinatown" shape="rect" coords="279,215,338,227" href="javascript:other_station('Chinatown')" /> 
+            <area alt="NewEnglandMedicalCenter" shape="rect" coords="268,231,340,241" href="javascript:other_station('NE Medical Center')" /> 
+            <area alt="BackBay" shape="rect" coords="254,246,308,258" href="javascript:other_station('Back Bay')" /> 
+            <area alt="MassAve" shape="rect" coords="238,257,295,271" href="javascript:other_station('Massachusetts Ave')" /> 
+            <area alt="Ruggles" shape="rect" coords="222,273,272,285" href="javascript:other_station('Ruggles')" /> 
+            <area alt="RoxburyCrossing" shape="rect" coords="211,286,303,298" href="javascript:other_station('Roxbury Crossing')" /> 
+            <area alt="JacksonSquare" shape="rect" coords="196,302,279,313" href="javascript:other_station('Jackson Square')" /> 
+            <area alt="StonyBrook" shape="rect" coords="180,317,248,326" href="javascript:other_station('Stony Brook')" /> 
+            <area alt="GreenStreet" shape="rect" coords="168,331,221,342" href="javascript:other_station('Green Street')" /> 
+            <area alt="ForestHills" shape="rect" coords="155,346,237,356" href="javascript:other_station('Forest Hills')" /> 
+
+        </map>
+    </div>     			<!--    end of left_container    -->
+
+
+    <div id="right_container">
+
+     <a name="nonav"></a>  
+     <h2>1. Select a transit station by clicking on a station name on the map at the left, or: <br /> 2. Choose station from box below, and click the 'Get Data' button:</h2>
+        <div id='comboBank'>
+            <select id="selected_station" title="Select a station" tabindex=" 20">
+                <option value="">Select a station:</option>
+            </select>           
+            <input type="button" tabindex="22" id="submit02" value="Get Data" /> 
+           <span id="resetData" class="hidden">  
+                <input id="clear_button" type="button" value="Clear Data" />
+            </span>                      <!--    end of Reset Data Button    -->
+            
+        </div>						  					<!--	end 'comboBank' div  -->
+        
+        
+        <div id="report" class="hidden">Selected station:&nbsp;&nbsp;&nbsp;<span id="snName" class="line"> _________ </span></div>
+      
+            
+        <div id="mytabs" class="tabs hidden">
+            <h3 id="board"><span>Exiting Stations</span></h3>
+                <div class="tabbody">
+                    <div id="tabs-1">
+                    <div id="board_grid"></div>
+                    </div>
+                </div>
+            <h3 id="alight"><span>Boarding Stations</span></h3>
+                <div class="tabbody">
+                   <div id="tabs-2">
+                        <div id="alight_grid"></div>
+                    </div> 
+                </div>
+            <h3 id="access"><span>Access Mode</span></h3>
+                <div class="tabbody">
+                    <div id="tabs-3">
+                        <div id="access_grid"></div>
+                    </div>
+                </div>
+            <h3 id="vehicles"><span>Household Vehicles</span></h3>
+                <div class="tabbody">
+                    <div id="tabs-4">
+                        <div id="vehicles_grid"></div>
+                    </div>
+                </div>	
+            <h3 id="income"><span>Household Income</span></h3>
+                <div class="tabbody">
+                    <div id="tabs-5">
+                        <div id="income_grid"></div>
+                    </div>
+                </div>
+            <h3 id="race"><span>Race</span></h3>
+                <div class="tabbody">
+                    <div id="tabs-6">
+                        <div id="race_grid"></div>
+                    </div>
+                </div>
+            <h3 id="fare"><span>Fare Type</span></h3>
+                <div class="tabbody">
+                    <div id="tabs-7">
+                        <div id="fare_grid"></div>
+                    </div>
+                </div>
+                
+          <br /><br />
+             <span class="spanForButtonWithLink">
+                <span id="download_header">Download data:
+                    <span id='download_buttons'>
+                        <input type="button" id="downloadData1" class="equal_button" value="This table only, this stop" alt="Downloads table for selected station or stop to comma-separated or Excel file" />                      
+                        <input type="button" id="downloadData3" class="equal_button" value="This stop, all data tables*" alt="Downloads table for selected station or stop to comma-separated or Excel file" />              
+                    </span></span><br />
+                    <span id="commentary">Note: downloaded data are totals, not percents<br /> --sort by 'SUMMARYRTTABLE' to get order of tables<br /><br />*NOTE ALSO that the 'Boarding Stations' table is based on a database ROW rather than column. 
+                    therefore, it downloads as a single row; and the 'all data' button does not work for this table.</span>
+                    <a id="downloadAnchorTag1" href=""></a>
+           </span>	 
+                
+                
+                
+                            
+        </div>                      <!--    end 'mytabs'  -->
+        
+       
+        <div id="resetData" class="hidden">
+                <input id="clear_button" type="button" value="Clear Data" />
+        </div>                      <!--    end of Reset Data Button    -->
+               
+    </div>     			            <!--  end of right_container  -->
+    
+</div>                              <!---   end of BigBox   -->  
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    CTPS.rtSurveyApp.init();	
+   });
+   
+</script>
+
+   
+</body>
+</html>
