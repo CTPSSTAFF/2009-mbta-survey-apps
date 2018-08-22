@@ -11,7 +11,7 @@ This repo contains the code for 4 apps, each of which is has its own HTML "index
 
 These apps make use of the following external resources:
 * version 1.7 of the jQuery library
-* version 0.09 of the jQuery accessible grid plugin (in external repo)
+* version 0.09 of the jQuery accessible grid plugin (in separate repo)
 * version 1.9.4 of Dirk Ginader's accessible tabs library
 * version 2.13.1 of the OpenLayers library
 * the OpenLayers ScaleBar add-in
